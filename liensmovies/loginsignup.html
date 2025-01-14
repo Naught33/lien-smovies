@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/loginsignup.css">
+    <script src="controllers/login.js" type="module" defer></script>
+    <title>Landing Page</title>
+</head>
+<body>
+    <h4 id="info" class="alert">Message</h4>
+   <div id="forms" class="forms">
+
+    
+    <!-- login form -->
+    <form class="login" id="Login" action="">
+        <h1>Log In</h1>
+        <p id="messageLogin" class="message">message</p>
+        <div class="username input">
+            <label for="lemail">Email: </label>
+            <input type="email" name="lemail" id="lemail">
+        </div>
+
+        <div class="password input">
+            <label for="password">Password: </label>
+            <input type="password" name="password" id="password">
+        </div>
+        <button id="loginButton" class="button">Login</button>
+        <p>Don't have an account? <span class="clickable_span" id="clickable_1">Sign Up</span></p>
+     </form>
+
+     <!-- signup form -->
+     <form class="signup" id="Signup" action="">
+        <h1>Sign Up</h1>
+        <p id="messageSignup" class="message">message</p>
+        <div class="username input">
+            <label for="cusername">Username: </label>
+            <input type="text" name="cusername" id="cusername">
+        </div>
+
+        <div class="email input">
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email">
+        </div>
+
+        <div class="password input">
+            <label for="cpassword">Password: </label>
+            <input type="password" name="cpassword" id="cpassword">
+        </div>
+        <button id="signupButton" class="button">Sign Up</button>
+        <p>Already have an account? <span class="clickable_span" id="clickable_2">Login</span></p>
+     </form>
+
+
+</div>
+</body>
+</html>

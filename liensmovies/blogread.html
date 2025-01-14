@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css">
+    <script src="controllers/blogread.js" type="module" defer></script>
+    <script src="src/main.js" type="module" defer></script>
+    <title>Lien's Movies</title>
+  </head>
+  <body>
+
+    <!-- header section -->
+    <header>
+      <div class="logo">LM</div>
+
+      <!-- dark day mode controller, notifications and menu -->
+      <div class="controls">
+        <ion-icon name="sunny"></ion-icon>
+        <ion-icon name="notifications"></ion-icon>
+        <ion-icon name="menu"></ion-icon>
+      </div>
+  </header>
+  <!-- <div id="app"></div> -->   
+   <!-- blog container    -->
+  <div class="blog-container">
+    <h2 id="title">This part contains the blog title</h2>
+    <a href="#">
+      Want to watch this movie and more?click 
+      here to go to our telegram.
+    </a>
+
+    <div class="metadata">
+      <p><span id="author">Author</span> • <span id="date">01-01-2025</span></p>
+    </div>
+
+    <span class="engagement_info">
+      <p>
+        <ion-icon id="like-button" name="heart-outline"></ion-icon> 
+        <span id="likes">0</span>
+      </p>
+      <p>
+        <ion-icon name="chatbubble-outline"></ion-icon> 
+        <span id="comments">0</span>
+      </p>
+    </span>
+
+    <p id="blog-body" class="blog-content">Venom: The Last Dance delivers an intrigue as Eddie. <span style="color: #16DB65;">Read More...</span></p>
+
+  </div>
+
+
+
+  <div id="comment-container" class="comment-container">
+    <h2>Comments</h2>
+
+    <div class="comment-input">
+      <input id="comment-text" type="text" placeholder="Write Comment...">
+      <ion-icon id="send-comment" name="paper-plane"></ion-icon>
+    </div>
+  </div>
+
+<!-- bottom navs -->
+    
+    <div class="bottomnavs">
+      <div class="menu_item">
+        <ion-icon name="compass"></ion-icon>
+        <a href="explore.html">Explore</a>
+      </div>
+
+      <div class="menu_item" style="color: #16DB65;">
+        <ion-icon name="home"></ion-icon>
+        <a id="home" href="index.html">Home</a>
+      </div>
+
+      <div class="menu_item">
+        <ion-icon name="person"></ion-icon>
+        <a href="account.html">Account</a>
+      </div>
+    </div>
+
+    <!-- scripts -->
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

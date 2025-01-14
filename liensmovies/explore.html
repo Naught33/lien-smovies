@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css">
+    <script src="controllers/explore.js" type="module" defer></script>
+    <script src="src/main.js" type="module" defer></script>
+    <title>Lien's Movies</title>
+  </head>
+  <body>
+
+    <!-- header section -->
+    <header>
+      <div class="logo">LM</div>
+
+      <!-- dark day mode controller, notifications and menu -->
+      <div class="controls">
+        <ion-icon name="sunny"></ion-icon>
+        <ion-icon name="notifications"></ion-icon>
+        <ion-icon name="menu"></ion-icon>
+      </div>
+  </header>
+    <!-- <div id="app"></div> -->
+
+    <!-- search bar -->
+
+    <div class="searchbar">
+      <input id="search-query" type="text" placeholder="Search for a movie...">
+      <ion-icon id="search-button" name="search"></ion-icon>
+    </div>
+
+    <!-- cards -->
+    <!-- all Blogs -->
+     <div id="all-blog-container" class="all_blogs">
+      <!-- blogs will appear here -->
+    </div>
+    
+
+<!-- bottom navs -->
+ 
+<!-- pop up -->
+
+<div class="pop_up">
+  <a href="#">
+  <p>Want to watch a movie? click here
+     to go to our telegram channel!
+  </p>
+</a>
+<ion-icon name="close-circle"></ion-icon>
+</div>
+
+<!-- end of pop up -->
+    
+    
+<div class="bottomnavs">
+  <div class="menu_item" style="color: #16DB65;">
+    <ion-icon name="compass"></ion-icon>
+    <a href="explore.html">Explore</a>
+  </div>
+
+  <div class="menu_item">
+    <ion-icon name="home"></ion-icon>
+    <a id="home" href="index.html">Home</a>
+  </div>
+
+  <div class="menu_item">
+    <ion-icon name="person"></ion-icon>
+    <a href="account.html">Account</a>
+  </div>
+</div>
+
+    <!-- scripts -->
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

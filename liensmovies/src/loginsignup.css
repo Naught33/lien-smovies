@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background: white;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.forms{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    height: 100vh;
+    width: 80vw;
+    top: 10%;
+    left: 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    margin: 8px;
+    border-radius: 8px;
+    z-index: 999;
+    backdrop-filter: blur(12px);
+    color: black;
+    box-shadow: 0 .3rem 1rem .5px #0000001c;
+    width: 300px;
+}
+
+.input, form h1, form p{
+    margin: 10px;
+}
+
+label{
+    display: inline-block;
+    text-align: left;
+    width: 100px;
+}
+
+input, input:focus{
+    border: none;
+    background: transparent;
+    outline: none;
+    border-bottom: 1px solid black;
+    color: black;
+    width: 280px;
+}
+
+.items label{
+    width: 150px;
+}
+
+.items input{
+    width: 300px;
+}
+
+
+.button, button:active, button:focus{
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    background: #16DB65;
+    height: 40px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.message{
+    margin-block: 1px;
+    font-size: .6rem;
+    opacity: 0;
+}
+
+.clickable_span{
+    cursor: pointer;
+    color: #16DB65;
+}
+
+.login, .signup{
+    transition: .8s;
+}
+
+.signup{
+    opacity: 0;
+}
+
+.loginhidden{
+    transform: translateY(-138%);
+    opacity: 0;
+}
+
+.signupopen{
+    transform: translateY(-40%);
+    opacity: 1;
+}
+
+.signuphidden{
+    transform: translateY(0);
+    opacity: 0;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: none;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background: rgba(0, 0, 0, 0.658);
+    align-items: center;
+    height: 20vh;
+}
+
+.navbar li{
+    cursor: pointer;
+    float: left;
+    list-style-type: none;
+    margin-inline: 5px;
+}
+
+.navbar .logo{
+    margin-left: 5px;
+}
+
+.content{
+    display: flex;
+}
+
+
+::-webkit-scrollbar{
+    color: white;
+}
+.dashboard, .items{
+    background: rgba(0, 0, 0, 0.731);
+    height: 60vh;
+    margin-top: 10vh;
+    margin-inline: 5px;
+    border-radius: 8px;
+    color: white;
+}
+.dashboard{
+    width: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dashboard p{
+    padding: 4px;
+    width: 90%;
+    text-align: center;
+    background: rgb(71, 132, 254);
+    margin: 10px;
+    border-radius: 2px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.items{
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    gap: 1.5rem;
+}
+
+.items .item{
+    display: flex;
+    width: 95%;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgba(206, 206, 206, 0.728);
+    color: black;
+    border: 1px solid white;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.item p, .item h4{
+    margin-inline: 3px;
+}
+
+
+.shakeForm{
+    animation: shake .2s 2;
+}
+
+.shakeSignup{
+    animation: shakeS .2s 2;
+}
+
+.finfo{
+    top: -100vh;
+    opacity: 0;
+    left: 20vw;
+    position: absolute;
+    height: 80vh;
+    width: 60vh;
+    background: white;
+    border-radius: 4px;
+    transition: .6s;
+}
+
+.finfopopped{
+    top: 10vh;
+    opacity: 1;
+}
+
+#closepopup{
+    margin: 5px;
+    cursor: pointer;
+    color: red;
+}
+
+.imessage h4, .imessage p{
+    margin: 2px;
+}
+
+.imessage{
+    display: flex;
+    margin: 5px;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+@keyframes shakeS{
+    0%,100%{
+        transform: translate(0, -40px);
+    }
+    50%{
+        transform: translate(10px, -40px);
+    }
+}
+
+@keyframes shake{
+    0%,100%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(10px);
+    }
+}
+
+.alert{
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+    margin-top: 10px;
+    background: #16DB65;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid rgb(120, 120, 120);
+    opacity: 0;
+    transition: .6s;
+    z-index: 999;
+    color: white;
+}
+
+.alertShow{
+    opacity: 1;
+    z-index: 999;
+}
+
+.deleteassignment{
+    background-color: rgb(250, 25, 25);
+    border: none;
+    border-radius: 4px;
+    margin-right: 2px;
+    cursor: pointer;
+}

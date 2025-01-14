@@ -1,0 +1,667 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+  /* day colors */
+  --bg-day: #ffffff;
+  --day-shadow: #3a3a3a46;
+  --day-component: #16DB65;
+
+  /* fonts */
+  --default-font: 'Montserrat', sans-serif;
+}
+
+/* general */
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: var(--default-font);
+}
+
+body{
+  overflow-x: hidden;
+}
+
+button{
+  cursor: pointer;
+}
+
+.modal{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--bg-day);
+  box-shadow: 0 .3rem 1rem .5px var(--day-shadow);
+  border-radius: 12px;
+  z-index: 99;
+}
+
+/* .modal::after{
+  content: '';
+  z-index: 90;
+  width: 100vw;
+  height: 100vh;
+  background: #00000034;
+  backdrop-filter: blur(10px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+} */
+
+header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.logo{
+  margin: 10px;
+  height: 3rem;
+  width: 3rem;
+  box-shadow: 0 .3rem 1rem .5px var(--day-shadow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 150px;
+  font-weight: bold;
+  background: var(--bg-day);
+  z-index: 99;
+}
+
+ion-icons{
+  z-index: 90;
+}
+
+header .controls{
+  margin: 10px;
+  height: 3rem;
+  box-shadow: 0 .3rem 1rem .5px var(--day-shadow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 150px;
+  background: var(--bg-day);
+}
+
+header .controls ion-icon{
+  margin: 0 10px;
+  font-size: 24px;
+}
+
+.bottomnavs{
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  translate: -50%;
+  display: flex;
+  box-shadow: 0 .3rem 1rem .5px var(--day-shadow);
+  border-radius: 150px;
+  height: 3rem;
+  background: var(--bg-day);
+}
+
+.bottomnavs .menu_item{
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.menu_item ion-icon{
+  font-size: 24px;
+}
+
+/* home page */
+
+.card{
+  margin: 10px;
+  box-shadow: 0 .3rem 1rem .5px var(--day-shadow);
+  border-radius: 12px;
+  height: 210px;
+}
+
+.blog_card{
+  margin: 10px;
+  width: 180px;
+  height: 150px;
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.blog_card h3{
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    width: 150px; 
+    display: block;
+}
+
+.card h2{
+  margin: 10px;
+}
+
+#latest_card{
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+}
+
+.engagement_info{
+  display: flex;
+  align-items: center;
+  color: var(--day-component);
+  font-weight: bold;
+  gap: 4px;
+}
+
+.engagement_info p{
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  margin: 0;
+}
+
+.blog_card .engagement_info,
+.blog_card h3,
+.blog_card .author{
+  margin-inline: 3px;
+}
+
+.blog_container{
+  display: grid;
+  overflow-y: auto;
+  margin: 10px;
+  grid-auto-flow: column;
+}
+
+.menu_item a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.accountPrompt{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00000034;
+  backdrop-filter: blur(10px);
+  z-index: 999;
+}
+
+.accountPrompt .prompt{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  box-shadow: 0 .3rem 1rem .5px var(--day-shadow);
+  margin: 10px;
+}
+
+.accountPrompt .prompt .btn-group{
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  gap: 10px;
+}
+
+.accountPrompt button:first-child{
+  background-color: var(--day-component);
+  color: white;
+}
+
+.accountPrompt h2{
+  margin: 10px;
+  text-align: center;
+}
+
+/* explore page */
+
+.searchbar{
+  margin-top: 5rem;
+  margin-inline: 10px;
+  box-shadow: 0 .3rem 1rem .5px var(--day-shadow);
+  height: 3rem;
+  border-radius: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.searchbar input, .searchbar ion-icon{
+  margin: 0 10px;
+}
+
+.searchbar input{
+  padding: 3px;
+  width: 90%;
+  border: none;
+  outline: none;
+}
+
+.searchbar ion-icon{
+  font-size: 24px;
+}
+
+.all_blogs{
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.pop_up{
+  position: fixed;
+  bottom: 4rem;
+  left: 50%;
+  translate: -50%;
+  background: var(--day-component);
+  border-radius: 150px;
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  width: 90%;
+}
+
+.pop_up a{
+  display: flex;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.pop_up a,
+.pop_up ion-icon{
+  margin: 10px;
+  display: flex;
+}
+
+.pop_up ion-icon{
+  font-size: 1.5rem;
+  color: white;
+}
+
+/* account page */
+
+.account{
+  margin: 5rem 10px;
+  box-shadow: 0 .3rem 1rem .5px var(--day-shadow);
+  border-radius: 12px;
+
+}
+
+.identity{
+  margin: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.profile_pic{
+  border: 2px solid black;
+}
+
+.basic_info{
+  margin: 10px;
+}
+
+.info_item, .stats, .stat, .btn_group button{
+  margin: 10px;
+}
+
+.btn_group button{
+  border: none;
+  height: 3rem;
+  width: 150px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.stat-group{
+  display: flex;
+}
+
+.stat{
+  box-shadow: 0 .3rem 1rem .5px var(--day-shadow);
+  border-radius: 8px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.stat p{
+  margin: 5px;
+  font-weight: bold;
+}
+
+.stat ion-icon{
+  font-size: 24px;
+  color: var(--day-component);
+}
+
+/* reading page */
+.mini-pic{
+  height: 2rem;
+  width: 2rem;
+  border: 1px solid black;
+  margin: 5px;
+  box-shadow: none;
+}
+
+.blog-container{
+  margin: 10px;
+  margin-top: 5rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 .3rem 1rem .5px var(--day-shadow);
+  border-radius: 12px;
+  max-height: 65vh;
+  overflow-y: auto;
+}
+
+.blog-container .engagement_info{
+  margin-inline: 10px;
+}
+
+.comment-container{
+  margin: 10px;
+  box-shadow: 0 .3rem 1rem .5px var(--day-shadow);
+  border-radius: 12px;
+  max-height: 65vh;
+  overflow-y: auto;
+  margin-bottom: 100px;
+}
+
+.blog-container h2,p{
+  margin-inline: 10px;
+}
+
+.blog-container a{
+  display: flex;
+  font-weight: bold;
+  color: var(--day-component);
+  text-decoration: none;
+  font-size: 12px;
+  margin: 10px;
+}
+
+.blog-content{
+  margin: 10px;
+}
+
+.comment-header{
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  max-height: 45vh;
+  min-width: 300px;
+  overflow: auto;
+}
+
+.comment-container h2{
+  margin-inline: 10px;
+}
+.comment{
+  margin: 10px;
+}
+
+.comment-body{
+  margin-inline: 10px;
+}
+
+.comment-input{
+  box-shadow: 0 .3rem 1rem .5px var(--day-shadow);
+  height: 3rem;
+  border-radius: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  bottom: .5rem;
+  margin: 10px;
+}
+
+.comment-input input{
+  padding: 5px;
+  height: 1.5rem;
+  margin: 10px;
+  border: none;
+  width: 90%;
+  outline: none;
+}
+
+.comment-input ion-icon{
+  margin: 10px;
+  font-size: 24px;
+  color: var(--day-component);
+}
+
+/* admin */
+#top_card{
+  margin-top: 5rem;
+}
+
+#top_card h2{
+  margin: 10px;
+}
+
+.stat{
+  width: 200px;
+  height: 200px;
+}
+
+.stat-container{
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.blog-actions{
+  margin: 10px;
+  margin-block: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.blog-actions a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 1rem;
+  box-shadow: 0 .3rem 1rem .5px var(--day-shadow);
+  border-radius: 150px;
+  font-weight: bold;
+  gap: 10px;
+}
+
+.blog-actions a ion-icon{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+.hot{
+  background: var(--day-component);
+  color: white;
+}
+
+.cold{
+  color: black;
+}
+
+/* all blogs */
+.f-header{
+  margin: 10px;
+}
+
+.blog-tile{
+  margin: 15px;
+  background: white;
+  box-shadow: 0 .3rem 1rem .5px var(--day-shadow);
+  border-radius: 12px;
+}
+
+.blog-tile .btn-group, .blog-tile p, .blog-tile h4{
+  margin: 0 10px;
+}
+
+.btn-group button{
+  margin-block: 10px;
+  width: 100px;
+  height: 2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+}
+
+/* write blog */
+
+.editor{
+  min-height: 40vh;
+  max-height: 60vh;
+}
+
+.editor h2, .editor p{
+  opacity: .5;
+  margin: 10px;
+  outline: none;
+}
+
+.blog-info{
+  display: flex;
+}
+
+.blog-info #posterURL{
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    width: 150px; 
+    display: block;
+}
+
+.btn-group-w button{
+  margin: 10px;
+}
+
+.poster-search{
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.poster-search button{
+  border: none;
+  background-color: var(--day-component);
+  font-weight: bold;
+  color: white;
+}
+
+.poster-search input, .poster-search button{
+  height: 2.5rem;
+  border-radius: 8px;
+}
+
+.poster-search input{
+  padding: 5px;
+}
+
+.movie-posters{
+  width: 80vw;
+  height: 60vh;
+
+}
+
+.movie-posters h2, .movie-posters .posters{
+  margin: 10px;
+}
+
+.movie-posters ion-icon{
+  font-size: 24px;
+  margin: 10px;
+}
+
+.posters{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 3 equal-width columns */
+  grid-gap: 10px; /* Space between grid items */
+  padding: 20px;
+  max-width: 100%; /* Ensure container width does not exceed the available width */
+  box-sizing: border-box; /* Include padding and borders in width/height calculations */
+  overflow: auto;
+  grid-auto-flow: column;
+}
+
+
+@media screen and (max-width: 600px) {
+  /* home page */
+  .bottomnavs{
+    width: 90%;
+    justify-content: space-around;
+  }
+
+  .card{
+    height: 260px;
+  }
+
+  .blog_card{
+    height: 200px;
+    width: 150px;
+  }
+
+  #latest_card{
+    margin-bottom: 3.2rem;
+  }
+
+  /* explore page */
+
+  .pop_up{
+    display: grid;
+    grid-auto-flow: column;
+  }
+  .pop_up ion-icon{
+    font-size: 2rem;
+    color: white;
+  }
+
+  .pop_up{
+    position: fixed;
+    bottom: 4rem;
+    left: unset;
+    translate: unset;
+    width: unset;
+    margin: 10px;
+  }
+  
+
+  /* account page */
+  .btn_group{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* admin */
+  .stat{
+    width: 150px;
+    height: 200px;
+  }
+
+  /* write blog */
+  .posters{
+    grid-template-columns: repeat(1, 1fr); /* 3 equal-width columns */
+    grid-auto-flow: column;
+  }
+}
+

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/style.css">
+    <script src="controllers/adminhome.js" type="module" defer></script>
+    <script src="../src/main.js" type="module" defer></script>
+    <title>Lien's Movies</title>
+  </head>
+  <body>
+
+    <!-- header section -->
+    <header>
+      <div class="logo">LM</div>
+
+      <!-- dark day mode controller, notifications and menu -->
+      <div class="controls">
+        <ion-icon name="sunny"></ion-icon>
+        <ion-icon name="notifications"></ion-icon>
+        <ion-icon name="menu"></ion-icon>
+      </div>
+  </header>
+  <!-- <div id="app"></div> -->
+
+
+  <!-- account_info -->
+  <div id="top_card" class="card">
+    <h2>Top Blogs</h2>
+    <div id="blogs-container" class="blog_container">
+      <!-- blogs will appear here -->
+    </div>
+   </div>
+
+   <div class="blog-actions">
+    <a class="hot" href="writeblog.html"><ion-icon name="add"></ion-icon>Create Blog</a>
+    <a class="cold" href="allblogs.html"><ion-icon name="list"></ion-icon>All</a>
+   </div>
+
+   <div class="stat-container">
+    <div class="stat">
+      <ion-icon name="book"></ion-icon>
+      <h2>Total Blogs</h2>
+      <p id="aggregate-blogs">0</p>
+    </div>
+
+    <div class="stat">
+      <ion-icon name="heart"></ion-icon>
+      <h2>Total Likes</h2>
+      <p id="aggregate-likes">0</p>
+    </div>
+   </div>
+  
+
+
+<!-- bottom navs -->
+    
+<div class="bottomnavs">
+  <div class="menu_item">
+    <ion-icon name="compass"></ion-icon>
+    <a href="../explore.html">Explore</a>
+  </div>
+
+  <div class="menu_item" style="color: #16DB65;">
+    <ion-icon name="home"></ion-icon>
+    <a id="home" href="Adminhome.html">Home</a>
+  </div>
+
+  <div class="menu_item">
+    <ion-icon name="person"></ion-icon>
+    <a href="../account.html">Account</a>
+  </div>
+</div>
+
+    <!-- scripts -->
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

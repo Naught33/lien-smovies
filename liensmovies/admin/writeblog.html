@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/style.css">
+    <script src="controllers/writeblog.js" type="module" defer></script>
+    <script src="../src/main.js" type="module" defer></script>
+    <title>Lien's Movies</title>
+  </head>
+  <body>
+
+    <!-- header section -->
+    <header>
+      <div class="logo">LM</div>
+
+      <!-- dark day mode controller, notifications and menu -->
+      <div class="controls">
+        <ion-icon name="sunny"></ion-icon>
+        <ion-icon name="notifications"></ion-icon>
+        <ion-icon name="menu"></ion-icon>
+      </div>
+  </header>
+  <!-- <div id="app"></div> -->
+
+
+  <!-- Editor -->
+
+  <div class="editor blog-container">
+    <h2 contenteditable id="title">Click here to insert blog title...</h2>
+    <p contenteditable id="content">Click here to Insert body...</p>
+  </div>
+
+  <!-- movie name -->
+
+  <div class="poster-search">
+    <input id="movie_title" type="text" placeholder="input movie name...">
+    <button id="getposterbtn">Search for movie poster</button>
+  </div>
+
+  <div class="blog-info">
+    <div class="chars">
+        <p>Characters</p>
+        <p id="charCount">0/2500</p>
+    </div>
+
+    <div class="words">
+        <p>Words</p>
+        <p id="wordCount">0</p>
+    </div>
+
+    <div class="words">
+        <p>Poster URL</p>
+        <p id="posterURL">not chosen...</p>
+    </div>
+  </div>
+
+  <div class="btn-group btn-group-w">
+    <button id="uploadButton" style="background: #16DB65; color: white;">Post Blog</button>
+    <button id="discardButton" style="background: #FF4343; color: white;">Discard</button>
+  </div>
+
+  <div id="poster-modal" class="modal movie-posters" style="display: none;">
+    <span style="display: grid; grid-auto-flow: column;"><h2>Available Posters</h2> <ion-icon id="close-modal" name="close-circle"></ion-icon></span>
+    <div id="poster-holder" class="posters">
+        <!-- will hold all the fetched posters -->
+    </div>
+  </div>
+
+
+
+
+<!-- bottom navs -->
+    
+    <div class="bottomnavs">
+      <div class="menu_item">
+        <ion-icon name="compass"></ion-icon>
+        <a href="../explore.html">Explore</a>
+      </div>
+
+      <div class="menu_item" style="color: #16DB65;">
+        <ion-icon name="home"></ion-icon>
+        <a id="home" href="Adminhome.html">Home</a>
+      </div>
+
+      <div class="menu_item">
+        <ion-icon name="person"></ion-icon>
+        <a href="../account.html">Account</a>
+      </div>
+    </div>
+
+    <!-- scripts -->
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
