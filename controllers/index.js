@@ -40,7 +40,7 @@ async function checkLogInStatusAndInitiatePopUp(){
   `;
   document.body.appendChild(loginPrompt);
   const loginButton = document.getElementById('redirect');
-  loginButton.addEventListener('click', ()=>{window.location.href = 'loginsignup.html'});
+  loginButton.addEventListener('click', ()=>{window.location.href = '/loginsignup.html'});
   const closePromptButton = document.getElementById('close-prompt');
   closePromptButton.addEventListener('click', ()=>{loginPrompt.remove()});
 
