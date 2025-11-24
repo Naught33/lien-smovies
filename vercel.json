@@ -3,11 +3,11 @@
   "rewrites": [
     {
       "source": "/admin/AdminHome.html",
-      "destination": "/admin/AdminHome.html"
+      "destination": "/admin/Adminhome.html"
     },
     {
       "source": "/admin/AdminHome",
-      "destination": "/admin/AdminHome.html"
+      "destination": "/admin/Adminhome.html"
     }
   ]
 }
