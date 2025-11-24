@@ -2,7 +2,7 @@
 import { getAccountInfo } from "./appwrite";
 
 //constants
-const adminURL = "./admin/AdminHome.html";
+const adminURL = "./admin/Adminhome.html";
 const secondaryAdminURL = "Adminhome.html";
 const homeButton = document.getElementById('home');
  
