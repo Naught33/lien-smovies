@@ -11,7 +11,8 @@ export default defineConfig({
         blogread: resolve(__dirname, 'blogread.html'),
         loginsignup: resolve(__dirname, 'loginsignup.html'),
         allblogs: resolve(__dirname, 'admin/allblogs.html'),
-        writeblog: resolve(__dirname, 'admin/writeblog.html')
+        writeblog: resolve(__dirname, 'admin/writeblog.html'),
+        adminhome: resolve(__dirname, 'admin/Adminhome.html')
       }
     }
   }
