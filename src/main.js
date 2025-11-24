@@ -5,6 +5,8 @@ import { getAccountInfo } from "./appwrite";
 const adminURL = "./admin/AdminHome.html";
 const secondaryAdminURL = "Adminhome.html";
 const homeButton = document.getElementById('home');
+ 
+
 
 async function changeHomePageUrl(){
     const accountInfo = await getAccountInfo();
